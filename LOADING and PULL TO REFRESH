@@ -1,3 +1,14 @@
-LOADING and PULL TO REFRESH
+--->>> LOADING and PULL TO REFRESH <<<---
+Loading ---->>>> pod "KRPullLoader"
 
-pod "KRPullLoader"
+REFRESH ---->>>>>>  pod 'Refreshable'
+
+
+--->>> Convert String from Array <<<---
+
+let set = NSSet(array: arrLangColl as! [Any])
+print(set)
+let strings1 = set.allObjects as? [String] // or as!
+
+let finalStr = strings1?.joined(separator: ",")
+self.lblLanhuge.text = finalStr
