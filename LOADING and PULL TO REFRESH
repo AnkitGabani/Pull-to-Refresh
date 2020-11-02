@@ -1,7 +1,16 @@
 --->>> LOADING and PULL TO REFRESH <<<---
 Loading ---->>>> pod "KRPullLoader"
 
+
 REFRESH ---->>>>>>  pod 'Refreshable'
+
+tblMarket.addPullToRefresh(action: { [weak self] in
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        self!.getPosts()
+        }
+    })
+
+self.tblMarket.stopPullToRefresh()
 
 
 --->>> Convert String from Array <<<---
